@@ -1,5 +1,5 @@
 NAME="keychain"
-VERSION=2.7.1
+VERSION=2.8.1
 RELEASE=1
 CATEGORY="Utils"
 SUMMARY="SSH key manager"
@@ -9,8 +9,10 @@ ssh-agent process.  By default, the ssh-agent started by keychain is long-
 running and will continue to run, even after you have logged out from the
 system."
 REQUIRES="openssh"
-HOMEPAGE="http://docs.funtoo.org/wiki/Keychain"
-SRC_URI="http://www.funtoo.org/archive/keychain/${P}.tar.bz2"
+HOMEPAGE="http://www.funtoo.org/Keychain"
+SRC_URI="http://www.funtoo.org/distfiles/keychain/keychain-${VERSION}.tar.bz2"
+
+ARCH=noarch
 
 src_compile() { :; }
 
@@ -18,5 +20,4 @@ src_install() {
 	cd ${S}
 	dobin keychain
 	doman keychain.1
-	dodoc README.rst
 }
